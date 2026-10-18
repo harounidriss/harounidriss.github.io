@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmat Haroun Idriss | Portfolio scientifique</title>
+  <meta name="description" content="Portfolio scientifique : simulation numérique, éléments finis, aérodynamique et intelligence artificielle.">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1120;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      background: #172554;
+    }
+    header h1 { font-size: 2.4rem; margin-bottom: 10px; }
+    header p { color: #cbd5e1; }
+    main { max-width: 1000px; margin: auto; padding: 30px 20px; }
+    h2 { color: #60a5fa; }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #172033;
+      padding: 22px;
+      border-radius: 12px;
+      border: 1px solid #334155;
+    }
+    .card h3 { color: #93c5fd; }
+    a { color: #60a5fa; }
+    .button {
+      display: inline-block;
+      padding: 9px 14px;
+      background: #2563eb;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ahmat Haroun Idriss</h1>
+    <p>Portfolio scientifique et ingénierie numérique</p>
+    <p>Aérodynamique · Éléments finis · Intelligence artificielle</p>
+    <a class="button" href="#projets">Découvrir mes projets</a>
+  </header>
+
+  <main>
+    <section>
+      <h2>À propos</h2>
+      <p>
+        Bienvenue sur mon portfolio. J'explore la modélisation
+        mathématique, la simulation numérique et les méthodes
+        scientifiques assistées par ordinateur.
+      </p>
+    </section>
+
+    <section id="projets">
+      <h2>Mes projets</h2>
+      <div class="projects">
+
+        <article class="card">
+          <h3>Profil aérodynamique d’Euler</h3>
+          <p>Projet de modélisation et d'étude aérodynamique.</p>
+          <a class="button" href="https://github.com/harounidriss/euler-airfoil">
+            Voir le code
+          </a>
+        </article>
+
+        <article class="card">
+          <h3>Simulation d’un bioréacteur par PINN</h3>
+          <p>Application des réseaux de neurones informés par la physique.</p>
+          <a class="button" href="https://github.com/harounidriss/PINN-Bioreactor-Simulation">
+            Voir le code
+          </a>
+        </article>
+
+        <article class="card">
+          <h3>Analyse des contraintes d’un pont</h3>
+          <p>Projet d'éléments finis pour étudier les déplacements et les contraintes d'un treillis.</p>
+          <a class="button" href="https://github.com/harounidriss/fem-bridge-analysis">
+            Voir le code
+          </a>
+        </article>
+
+        <article class="card">
+          <h3>Mini-projet</h3>
+          <p>Autres travaux et expérimentations scientifiques.</p>
+          <a class="button" href="https://github.com/harounidriss/mini-projet">
+            Voir le code
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Compétences et outils</h2>
+      <p>Python · Jupyter · NumPy · Matplotlib · Modélisation numérique</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Retrouvez mes travaux sur
+        <a href="https://github.com/harounidriss">mon profil GitHub</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Ahmat Haroun Idriss — Portfolio scientifique</p>
+  </footer>
+</body>
+</html>
