@@ -108,6 +108,64 @@
       </div>
     </section>
 
+    
+    <section id="visualisations">
+      <h2>Visualisations scientifiques</h2>
+      <p>Exemples pédagogiques de visualisation de phénomènes physiques.</p>
+
+      <div class="projects">
+        <article class="card">
+          <h3>Aérodynamique — pression</h3>
+          <div id="graphique-pression"></div>
+          <p>Exemple illustratif de la variation de pression le long d'un profil.</p>
+        </article>
+
+        <article class="card">
+          <h3>Éléments finis — déplacement</h3>
+          <div id="graphique-deplacement"></div>
+          <p>Exemple illustratif du déplacement d'une structure sous charge.</p>
+        </article>
+      </div>
+    </section>
+
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    <script>
+      const styleGraphique = {
+        paper_bgcolor: "#172033",
+        plot_bgcolor: "#172033",
+        font: { color: "#e5e7eb" },
+        margin: { t: 25, r: 15, b: 55, l: 55 },
+        autosize: true
+      };
+
+      Plotly.newPlot("graphique-pression", [{
+        x: [0, 0.2, 0.4, 0.6, 0.8, 1],
+        y: [0, -0.8, -1.2, -0.9, -0.4, 0],
+        type: "scatter",
+        mode: "lines+markers",
+        line: { color: "#60a5fa", width: 3 },
+        name: "Pression"
+      }], {
+        ...styleGraphique,
+        xaxis: { title: "Position relative x/c" },
+        yaxis: { title: "Pression relative (exemple)" }
+      }, { responsive: true });
+
+      Plotly.newPlot("graphique-deplacement", [{
+        x: [0, 20, 40, 60, 80, 100],
+        y: [0, 1.2, 2.5, 3.7, 4.4, 5],
+        type: "scatter",
+        mode: "lines+markers",
+        line: { color: "#34d399", width: 3 },
+        name: "Déplacement"
+      }], {
+        ...styleGraphique,
+        xaxis: { title: "Charge (exemple)" },
+        yaxis: { title: "Déplacement (exemple)" }
+      }, { responsive: true });
+    </script>
+
+
     <section>
       <h2>Compétences et outils</h2>
       <p>Python · Jupyter · NumPy · Matplotlib · Modélisation numérique</p>
