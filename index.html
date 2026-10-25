@@ -5,8 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ahmat Haroun Idriss | Portfolio scientifique</title>
-  <meta name="description" content="Portfolio scientifique : simulation numérique, éléments finis, aérodynamique et intelligence artificielle.">
+  <meta name="description" content="Portfolio scientifique : aérodynamique, éléments finis et intelligence artificielle.">
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -14,28 +19,55 @@
       color: #e5e7eb;
       line-height: 1.6;
     }
+
     header {
       padding: 60px 20px;
       text-align: center;
-      background: #172554;
+      background: linear-gradient(135deg, #172554, #1e3a8a);
     }
-    header h1 { font-size: 2.4rem; margin-bottom: 10px; }
-    header p { color: #cbd5e1; }
-    main { max-width: 1000px; margin: auto; padding: 30px 20px; }
-    h2 { color: #60a5fa; }
+
+    header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #cbd5e1;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    h2 {
+      color: #60a5fa;
+      margin-top: 35px;
+    }
+
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
     }
+
     .card {
+      min-width: 0;
       background: #172033;
       padding: 22px;
       border-radius: 12px;
       border: 1px solid #334155;
     }
-    .card h3 { color: #93c5fd; }
-    a { color: #60a5fa; }
+
+    .card h3 {
+      color: #93c5fd;
+    }
+
+    a {
+      color: #60a5fa;
+    }
+
     .button {
       display: inline-block;
       padding: 9px 14px;
@@ -44,6 +76,17 @@
       border-radius: 6px;
       text-decoration: none;
     }
+
+    .graphique {
+      width: 100%;
+      min-height: 220px;
+    }
+
+    .note {
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
     footer {
       text-align: center;
       padding: 25px;
@@ -51,6 +94,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Ahmat Haroun Idriss</h1>
@@ -71,8 +115,8 @@
 
     <section id="projets">
       <h2>Mes projets</h2>
-      <div class="projects">
 
+      <div class="projects">
         <article class="card">
           <h3>Profil aérodynamique d’Euler</h3>
           <p>Projet de modélisation et d'étude aérodynamique.</p>
@@ -91,7 +135,10 @@
 
         <article class="card">
           <h3>Analyse des contraintes d’un pont</h3>
-          <p>Projet d'éléments finis pour étudier les déplacements et les contraintes d'un treillis.</p>
+          <p>
+            Projet pédagogique d'éléments finis pour étudier
+            les déplacements et les contraintes d'un treillis.
+          </p>
           <a class="button" href="https://github.com/harounidriss/fem-bridge-analysis">
             Voir le code
           </a>
@@ -104,66 +151,150 @@
             Voir le code
           </a>
         </article>
-
       </div>
     </section>
 
-    
     <section id="visualisations">
       <h2>Visualisations scientifiques</h2>
-      <p>Exemples pédagogiques de visualisation de phénomènes physiques.</p>
+      <p>Exemples pédagogiques de visualisation de données.</p>
 
       <div class="projects">
         <article class="card">
           <h3>Aérodynamique — pression</h3>
-          <div id="graphique-pression"></div>
-          <p>Exemple illustratif de la variation de pression le long d'un profil.</p>
+          <div id="graphique-pression" class="graphique"></div>
+          <p class="note">
+            Courbe illustrative de pression relative le long d'un profil.
+            Les données ne proviennent pas d'une simulation réelle.
+          </p>
         </article>
 
         <article class="card">
           <h3>Éléments finis — déplacement</h3>
-          <div id="graphique-deplacement"></div>
-          <p>Exemple illustratif du déplacement d'une structure sous charge.</p>
+          <div id="graphique-deplacement" class="graphique"></div>
+          <p class="note">
+            Courbe illustrative du déplacement en fonction d'une charge.
+            Les données ne proviennent pas d'un calcul par éléments finis.
+          </p>
         </article>
       </div>
     </section>
 
-    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
-    <script>
-      const styleGraphique = {
-        paper_bgcolor: "#172033",
-        plot_bgcolor: "#172033",
-        font: { color: "#e5e7eb" },
-        margin: { t: 25, r: 15, b: 55, l: 55 },
-        autosize: true
-      };
+    <section>
+      <h2>Compétences et outils</h2>
+      <p>Python · Jupyter · NumPy · Matplotlib · Modélisation numérique</p>
+    </section>
 
-      Plotly.newPlot("graphique-pression", [{
-        x: [0, 0.2, 0.4, 0.6, 0.8, 1],
-        y: [0, -0.8, -1.2, -0.9, -0.4, 0],
-        type: "scatter",
-        mode: "lines+markers",
-        line: { color: "#60a5fa", width: 3 },
-        name: "Pression"
-      }], {
-        ...styleGraphique,
-        xaxis: { title: "Position relative x/c" },
-        yaxis: { title: "Pression relative (exemple)" }
-      }, { responsive: true });
+    <section>
+      <h2>Contact</h2>
+      <p>
+        Retrouvez mes travaux sur
+        <a href="https://github.com/harounidriss">mon profil GitHub</a>.
+      </p>
+    </section>
+  </main>
 
-      Plotly.newPlot("graphique-deplacement", [{
-        x: [0, 20, 40, 60, 80, 100],
-        y: [0, 1.2, 2.5, 3.7, 4.4, 5],
-        type: "scatter",
-        mode: "lines+markers",
-        line: { color: "#34d399", width: 3 },
-        name: "Déplacement"
-      }], {
-        ...styleGraphique,
-        xaxis: { title: "Charge (exemple)" },
-        yaxis: { title: "Déplacement (exemple)" }
-      }, { responsive: true });
-    </script>
+  <footer>
+    <p>© 2026 Ahmat Haroun Idriss — Portfolio scientifique</p>
+  </footer>
+
+  <script>
+    function dessinerGraphique(id, valeurs, couleur, titreX, titreY) {
+      const largeur = 400;
+      const hauteur = 260;
+      const gauche = 60;
+      const droite = 15;
+      const haut = 20;
+      const bas = 50;
+
+      const zoneW = largeur - gauche - droite;
+      const zoneH = hauteur - haut - bas;
+
+      const minY = Math.min(0, ...valeurs);
+      const maxY = Math.max(0, ...valeurs);
+      const margeY = (maxY - minY || 1) * 0.12;
+      const basY = minY - margeY;
+      const hautY = maxY + margeY;
+
+      const points = valeurs.map((v, i) => {
+        const x = gauche + i * zoneW / (valeurs.length - 1);
+        const y = haut + (hautY - v) * zoneH / (hautY - basY);
+        return `${x},${y}`;
+      }).join(" ");
+
+      const cercles = points.split(" ").map(p => {
+        const [x, y] = p.split(",");
+        return `<circle cx="${x}" cy="${y}" r="4" fill="${couleur}"/>`;
+      }).join("");
+
+      const graduations = 4;
+      let grille = "";
+
+      for (let i = 0; i <= graduations; i++) {
+        const y = haut + i * zoneH / graduations;
+        const valeur = hautY - i * (hautY - basY) / graduations;
+
+        grille += `
+          <line x1="${gauche}" y1="${y}"
+                x2="${largeur - droite}" y2="${y}"
+                stroke="#334155" stroke-dasharray="3 3"/>
+          <text x="${gauche - 8}" y="${y + 4}"
+                fill="#cbd5e1" text-anchor="end" font-size="10">
+            ${valeur.toFixed(1)}
+          </text>`;
+      }
+
+      document.getElementById(id).innerHTML = `
+        <svg viewBox="0 0 ${largeur} ${hauteur}"
+             style="width:100%;height:auto;display:block"
+             role="img" aria-label="${titreY} en fonction de ${titreX}">
+          ${grille}
+
+          <line x1="${gauche}" y1="${haut}"
+                x2="${gauche}" y2="${hauteur - bas}"
+                stroke="#94a3b8"/>
+
+          <line x1="${gauche}" y1="${hauteur - bas}"
+                x2="${largeur - droite}" y2="${hauteur - bas}"
+                stroke="#94a3b8"/>
+
+          <polyline points="${points}" fill="none"
+                    stroke="${couleur}" stroke-width="3"
+                    stroke-linejoin="round" stroke-linecap="round"/>
+
+          ${cercles}
+
+          <text x="${gauche + zoneW / 2}" y="${hauteur - 8}"
+                fill="#e5e7eb" text-anchor="middle" font-size="12">
+            ${titreX}
+          </text>
+
+          <text x="15" y="${haut + zoneH / 2}"
+                fill="#e5e7eb" text-anchor="middle" font-size="12"
+                transform="rotate(-90 15 ${haut + zoneH / 2})">
+            ${titreY}
+          </text>
+        </svg>`;
+    }
+
+    dessinerGraphique(
+      "graphique-pression",
+      [0, -0.8, -1.2, -0.9, -0.4, 0],
+      "#60a5fa",
+      "Position relative x/c",
+      "Pression relative"
+    );
+
+    dessinerGraphique(
+      "graphique-deplacement",
+      [0, 1.2, 2.5, 3.7, 4.4, 5],
+      "#34d399",
+      "Charge relative",
+      "Déplacement relatif"
+    );
+  </script>
+</body>
+</html>
+
 
 
     <section>
