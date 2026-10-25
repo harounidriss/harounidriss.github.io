@@ -154,6 +154,91 @@
       </div>
     </section>
 
+<section id="pont">
+  <h2>Analyse des contraintes d’un pont</h2>
+  <p>
+    Découverte de la méthode des éléments finis appliquée
+    à un treillis de pont.
+  </p>
+
+  <div class="card">
+    <svg viewBox="0 0 800 330"
+         role="img"
+         aria-label="Illustration schématique d'un treillis de pont avec une échelle qualitative des contraintes"
+         style="width:100%;height:auto;display:block">
+
+      <defs>
+        <linearGradient id="contrainte" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#2563eb"/>
+          <stop offset="35%" stop-color="#06b6d4"/>
+          <stop offset="60%" stop-color="#22c55e"/>
+          <stop offset="80%" stop-color="#facc15"/>
+          <stop offset="100%" stop-color="#ef4444"/>
+        </linearGradient>
+      </defs>
+
+      <rect width="800" height="330" rx="12" fill="#0b1120"/>
+
+      <g stroke="#64748b" stroke-width="2" opacity="0.35">
+        <path d="M60 250 H740 M60 280 H740"/>
+        <path d="M100 250 V280 M160 250 V280 M220 250 V280 M280 250 V280 M340 250 V280 M400 250 V280 M460 250 V280 M520 250 V280 M580 250 V280 M640 250 V280 M700 250 V280"/>
+      </g>
+
+      <g stroke="url(#contrainte)" stroke-width="9"
+         stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M100 230 L160 100 L280 100 L400 100 L520 100 L640 100 L700 230"/>
+        <path d="M100 230 L220 230 L340 230 L460 230 L580 230 L700 230"/>
+        <path d="M160 100 L220 230 L280 100 L340 230 L400 100 L460 230 L520 100 L580 230 L640 100"/>
+      </g>
+
+      <g fill="#e5e7eb" stroke="#94a3b8" stroke-width="2">
+        <circle cx="100" cy="230" r="7"/>
+        <circle cx="160" cy="100" r="7"/>
+        <circle cx="220" cy="230" r="7"/>
+        <circle cx="280" cy="100" r="7"/>
+        <circle cx="340" cy="230" r="7"/>
+        <circle cx="400" cy="100" r="7"/>
+        <circle cx="460" cy="230" r="7"/>
+        <circle cx="520" cy="100" r="7"/>
+        <circle cx="580" cy="230" r="7"/>
+        <circle cx="640" cy="100" r="7"/>
+        <circle cx="700" cy="230" r="7"/>
+      </g>
+
+      <g fill="#93c5fd" font-size="14" text-anchor="middle">
+        <text x="400" y="45" font-size="21" font-weight="bold">
+          Treillis de pont — schéma pédagogique
+        </text>
+        <text x="100" y="300">Appui</text>
+        <text x="700" y="300">Appui</text>
+      </g>
+
+      <g>
+        <text x="400" y="315" fill="#cbd5e1" font-size="12" text-anchor="middle">
+          Couleurs illustratives — pas de résultats de calcul réels
+        </text>
+      </g>
+    </svg>
+
+    <h3>Comment lire cette illustration ?</h3>
+    <p>
+      Le treillis est représenté par des barres reliées à des nœuds.
+      Dans une simulation réelle, les calculs par éléments finis
+      permettent d'estimer les déplacements et les contraintes
+      sous des charges définies.
+    </p>
+
+    <a class="button"
+       href="https://github.com/harounidriss/fem-bridge-analysis">
+      Découvrir le projet
+    </a>
+  </div>
+</section>
+
+
+
+
+    
     <section id="visualisations">
       <h2>Visualisations scientifiques</h2>
       <p>Exemples pédagogiques de visualisation de données.</p>
