@@ -1,5 +1,4 @@
 # harounidriss.github.io
-Portfolio scientifique
 # Portfolio scientifique
 
 Portfolio de **Ahmat Haroun Idriss**, diplômé d'un Master 2 de mathématiques appliquées (Modélisation et Analyse Numérique, Université de Montpellier, 2025).
